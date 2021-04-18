@@ -1,4 +1,5 @@
 {
+  // Editor Settings
   "window.menuBarVisibility": "hidden",
   "editor.fontLigatures": true,
   "workbench.startupEditor": "welcomePage",
@@ -12,30 +13,13 @@
   "json.format.enable": false,
   "javascript.format.enable": false,
   "typescript.format.enable": false,
+  "editor.minimap.enabled": false,
+  "editor.lineHeight": 24,
+  "editor.fontWeight": "600",
   // Cursor
   "editor.cursorSmoothCaretAnimation": true,
   "editor.cursorBlinking": "expand",
-  //
-  "editor.minimap.enabled": false,
-
-  // config related to code formatting
-  "editor.formatOnSave": true,
-  "[javascript]": {
-    "editor.formatOnSave": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascriptreact]": {
-    "editor.formatOnSave": false,
-    "editor.defaultFormatter": null
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.tslint": true,
-    "source.organizeImports": true
-  },
-  "editor.lineHeight": 24,
-  "editor.fontWeight": "600",
-  "eslint.alwaysShowStatus": true,
+  // Editor fonts customizations
   "editor.fontFamily": "Victor Mono, Fira Code",
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -110,19 +94,17 @@
       {
         "scope": ["punctuation.definition.comment", "comment"],
         "settings": {
-          // "foreground": "#ff5874",
           "fontStyle": "italic"
         }
       },
       {
         "scope": [
-          //following will be in italic =FlottFlott
-          "entity.name.type.class", //class names
-          "keyword", //import, export, return…
-          "constant", //String, Number, Boolean…, this, super
-          "storage.modifier", //static keyword
+          "entity.name.type.class", 
+          "keyword", 
+          "constant", 
+          "storage.modifier",
           "storage.type",
-          "storage.type.class.js" //class keyword
+          "storage.type.class.js" 
         ],
         "settings": {
           "fontStyle": "italic"
@@ -130,7 +112,6 @@
       },
       {
         "scope": [
-          //following will be excluded from italics VSCode has some defaults for italics
           "invalid",
           "keyword.operator",
           "constant.numeric.css",
@@ -143,5 +124,19 @@
         }
       }
     ]
-  }
+  },
+  "terminal.integrated.fontFamily": "Victor Mono",
+  "terminal.integrated.fontSize": 17,
+  "terminal.integrated.fontWeight": 500,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "eslint.alwaysShowStatus": true
 }
